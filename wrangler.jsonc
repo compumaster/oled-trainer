@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "oled-trainer",
+  "compatibility_date": "2026-10-08",
+  // Static site only; no Worker script.
+  "assets": {
+    "directory": "./site"
+  },
+  "routes": [
+    { "pattern": "oledtrainer.kataren.com", "custom_domain": true }
+  ]
+}

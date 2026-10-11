@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OLED Trainer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="menu">
+    <h1>OLED Trainer</h1>
+    <p class="lede">
+      Runs full-screen, borderless color fields on a new OLED so it builds up its first hours
+      with even wear and no static elements, while the TV's own compensation cycle
+      (every 4 hours of use, in standby) does the actual leveling.
+    </p>
+
+    <section>
+      <h2>1. Set up the TV</h2>
+      <ul>
+        <li>SDR picture mode (Standard or Filmmaker), moderate brightness.</li>
+        <li>Leave <b>Auto Off / Auto Power Off</b> on. It puts the TV in standby after about 4 hours without a remote press, which starts the compensation cycle.</li>
+        <li>Never unplug the TV after a session. Compensation runs for about 10 minutes in standby.</li>
+        <li>Connected over HDMI from a PC? Label the input as <b>PC</b>.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>2. Check uniformity (before and after)</h2>
+      <p>Look for vertical bands, tint and dead pixels. Arrows / click / OK = next, Esc / Back = exit.</p>
+      <button id="btn-inspect" type="button">Open test slides</button>
+    </section>
+
+    <section>
+      <h2>3. Run a warm-up session</h2>
+      <label>Session length
+        <select id="session-hours">
+          <option value="1">1 hour</option>
+          <option value="2">2 hours</option>
+          <option value="4" selected>4 hours</option>
+        </select>
+      </label>
+      <div class="choices">
+        <div class="choice" id="choice-live">
+          <button id="btn-live" type="button">Start (computer over HDMI)</button>
+          <p>Rendered live. Keeps the computer's screen awake. Press any key to see remaining time; Esc stops.</p>
+        </div>
+        <div class="choice" id="choice-video">
+          <button id="btn-video" type="button">Start (TV's built-in browser)</button>
+          <p>Plays a looping video, which is the only thing the TV's screensaver won't interrupt. Back stops.</p>
+        </div>
+      </div>
+      <p class="note">At the end of the session the screen goes black. Turn the TV off, or let Auto Off do it, so compensation can run.</p>
+      <p id="error" class="error" hidden></p>
+    </section>
+  </main>
+
+  <div id="stage" hidden>
+    <video id="video" src="media/warmup.mp4" loop muted playsinline preload="none"></video>
+    <div id="overlay"></div>
+  </div>
+
+  <script src="sequence.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
