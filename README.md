@@ -56,3 +56,7 @@ Change the timeline in `site/sequence.js`, then run `npm run render` so the vide
 | `site/media/warmup.mp4` | One 530 s cycle, H.264 1080p30 (~2 MB). Generated, but committed so deploys don't need ffmpeg. |
 | `scripts/render-video.mjs` | Renders the timeline to the MP4 via ffmpeg. |
 | `wrangler.jsonc` | Cloudflare Workers config: assets-only, custom domain `oledtrainer.kataren.com`. |
+
+## License
+
+Public domain via [The Unlicense](LICENSE). Do whatever you want with it.

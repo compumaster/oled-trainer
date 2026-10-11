@@ -1,6 +1,7 @@
 {
   "name": "oled-trainer",
   "private": true,
+  "license": "Unlicense",
   "scripts": {
     "render": "node scripts/render-video.mjs",
     "dev": "wrangler dev --ip 0.0.0.0 --port 8080",
