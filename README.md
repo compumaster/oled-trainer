@@ -59,4 +59,4 @@ Change the timeline in `site/sequence.js`, then run `npm run render` so the vide
 
 ## License
 
-Public domain via [The Unlicense](LICENSE). Do whatever you want with it.
+[PolyForm Noncommercial 1.0.0](LICENSE). Free to use, copy, modify and share for any noncommercial purpose; selling it or using it commercially is not allowed.

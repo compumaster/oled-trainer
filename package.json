@@ -1,7 +1,7 @@
 {
   "name": "oled-trainer",
   "private": true,
-  "license": "Unlicense",
+  "license": "PolyForm-Noncommercial-1.0.0",
   "scripts": {
     "render": "node scripts/render-video.mjs",
     "dev": "wrangler dev --ip 0.0.0.0 --port 8080",
